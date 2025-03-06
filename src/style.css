@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family:"Big Shoulders Stencil",serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(199, 31, 31);
+}
+button{
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+.start-pause:active{
+  transform: scale(0.95);
+}
+.timer-btn.active {
+    background-color: #ccc; 
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(209, 58, 58);
+    gap: 1rem;
+    border-radius: 0.5rem;
+    padding: 4rem 3rem;
+}
+.timer-btn{
+    border: none;
+    background-color: inherit;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+.start-pause{
+    color: black;
+    font-size: 40px;
+    border-radius: 5px;
+    border: 0.2px;
+    padding: 1rem 5rem;
+}
+.timer{
+    font-size: 5rem;
+    color: white;
+}
+.s{
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .start-pause {
+        font-size: 24px;
+        padding: 0.6rem 3rem;
+    }
+
+    .timer {
+        font-size: 2.5rem;
+    }
+
+    .timer-btn {
+        font-size: 20px;
+        padding: 0.4rem 1.5rem;
+    }
+
+    .s {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .start-pause-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .start-pause {
+        font-size: 20px;
+        padding: 0.5rem 2.5rem;
+    }
+
+    .timer {
+        font-size: 2rem;
+    }
+
+    .timer-btn {
+        font-size: 18px;
+        padding: 0.3rem 1.2rem;
+    }
+
+    .s {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .start-pause-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
