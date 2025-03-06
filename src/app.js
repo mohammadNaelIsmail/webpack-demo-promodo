@@ -7,9 +7,11 @@ const timer = document.getElementById("timer");
 const breakSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16a.mp3");
 const ring = new Audio("/src/assets/audio/click.wav");
 const container = document.querySelector(".container");
+
 let timeLeft = 1500;
 let interval;
 let currentMode = "pomodoro";
+let sessionCount = 0;
 
 const updateTimer = () => {
     let minutes = Math.floor(timeLeft / 60);
@@ -26,8 +28,16 @@ const startTimer = () => {
             ring.play();
             clearInterval(interval);
             interval = null;
-            timeLeft = 1500;
-            updateTimer();
+            if (currentMode === "pomodoro") {
+                sessionCount++;
+                currentMode = sessionCount % 4 === 0 ? "long-break" : "short-break";
+                setTime(currentMode === "long-break" ? 15 * 60 : 5 * 60);
+            } else {
+                currentMode = "pomodoro";
+                setTime(25 * 60);
+            }
+            resetColors();
+            startTimer();
         }
     }, 1000);
 };
@@ -45,7 +55,6 @@ const setTime = (seconds) => {
 };
 
 const resetColors = () => {
-
     resetStyle(pomodoro);
     resetStyle(shortbreak);
     resetStyle(longbreak);
@@ -67,7 +76,8 @@ const resetStyle = (button) => {
 const applyStyles = (buttonColor, containerColor, activeButton) => {
     document.body.style.backgroundColor = buttonColor;
     container.style.backgroundColor = containerColor;
-    activeButton.style.backgroundColor = buttonColor;``
+    activeButton.style.backgroundColor = buttonColor;
+    activeButton.style.color = "white";
 };
 
 start.addEventListener("click", () => {
