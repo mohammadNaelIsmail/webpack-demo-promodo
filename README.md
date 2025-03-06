@@ -43,10 +43,10 @@ A simple and interactive Pomodoro timer web application built with vanilla JavaS
 - **JavaScript**: For implementing the timer logic and interactivity.
 - **Webpack**: For bundling JavaScript and other assets like audio files.
 
-
 ## Watch the demo
 
 Here is a quick demo of how the Pomodoro Timer works:
 
-[![Pomodoro Timer Demo](https://cdn.loom.com/sessions/thumbnails/your-video-id-with-thumbnail.jpg)]([https://www.loom.com/share/your-video-id]https://www.loom.com/share/f6958fd7349b45d59a2cc2d5edcc8c4c)
+[![Pomodoro Timer Demo](https://cdn.loom.com/sessions/thumbnails/f6958fd7349b45d59a2cc2d5edcc8c4c-with-thumbnail.jpg)](https://www.loom.com/share/f6958fd7349b45d59a2cc2d5edcc8c4c)
+
 
